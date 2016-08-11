@@ -12,3 +12,13 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.logo{
+    margin-top: 5px;
+}
+
+.gameLogo{
+    height: 40px;
+    width: auto;
+}
+
