@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -28,7 +28,7 @@
     </ul>
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container">
-             <a id="logo-container" href="index.html" class="brand-logo"><img src="img/higgamingLogo50.png" class="logo">
+            <a id="logo-container" href="index.html" class="brand-logo"><img src="img/higgamingLogo50.png" class="logo">
             </a>
             <ul class="right hide-on-med-and-down">
                 <!-- Dropdown Trigger -->
@@ -39,66 +39,178 @@
             <!-- Mobile Nav -->
             <!-- uses this if it detects its a mobile device -->
             <ul id="nav-mobile" class="side-nav">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li class="divider"></li>
                 <li><a href="about.html">About Us</a>
                 </li>
                 <li class="divider"></li>
                 <li><a href="stats.html">Stats</a>
-                </li>
-                <li class="divider"></li>
-                <li><a href="tryout.html">Tryout</a>
                 </li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse">Menu<i class="material-icons"></i></a>
         </div>
     </nav>
     <!-- End of Navigation -->
-    
-    </div>
-    <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <div class="row center">
-        <h5 class="center">TRYOUT</h5>
-          <p class="light">Snarky message about you thinking you have what it takes? to sign up here and schedule a tryout</p>
-        </div>
-      <br><br>
-        <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      </div>
-            <div class="row">
-        <div class="input-field col s12">
-          <input id="battle-net-tag" type="text" class="validate">
-          <label for="battle-net-tag">Battle.Net Tag</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-    <a class="waves-effect waves-light btn green"><i class="material-icons left">done</i>Submit</a>
-    </form>
-  </div>
 
     </div>
-  </div>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br>
+            <br>
+            <div class="row center">
+                <h5 class="center">We are always looking to grow our team...</h5>
+                <p class="light">Intrigued by the excellence of HIG Gaming? Want to join? Think you have what it takes?</p>
+                <p class="light">Apply today and find out!</p>
+            </div>
+            <br>
+            <br>
+            <div class="col s12 m12 l6">
+                <div class="card-panel">
+                    <h5 class="header2">Fill out the brief application</h5>
+                    <div class="row">
+                        <form class="formValidate" id="formValidate" method="get" action="" novalidate="novalidate">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <label for="firstName" class="">First Name*</label>
+                                    <!-- was called uname now called firstName -->
+                                    <input id="firstName" name="firstName" type="text" data-error=".errorTxt1" aria-required="true" class="error" aria-describedby="firstName-error" aria-invalid="true">
+                                    <div class="errorTxt1">
+                                        <div id="firstName-error" class="error" style="display: block;"></div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s6">
+                                    <label for="lastName" class="">Last Name*</label>
+                                    <input id="lastName" name="lastName" type="text" data-error=".errorTxt1" aria-required="true" class="error" aria-describedby="lastName-error" aria-invalid="true">
+                                    <div class="errorTxt1">
+                                        <div id="lastName-error" class="error" style="display: block;"></div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="battleNetTag" class="">Battle.Net Tag*</label>
+                                    <input id="battleNetTag" name="battleNetTag" type="text" data-error=".errorTxt1" aria-required="true" class="error" aria-describedby="battleNetTag-error" aria-invalid="true">
+                                    <div class="errorTxt1">
+                                        <div id="battleNetTag-error" class="error" style="display: block;"></div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="rank" class="">Rank*</label>
+                                    <input id="rank" name="rank" type="text" data-error=".errorTxt1" aria-required="true" class="error" aria-describedby="rank-error" aria-invalid="true">
+                                    <div class="errorTxt1">
+                                        <div id="rank-error" class="error" style="display: block;"></div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="password">Password *</label>
+                                    <input id="password" type="password" name="password" data-error=".errorTxt3" aria-required="true" class="error" aria-describedby="password-error">
+                                    <div class="errorTxt3">
+                                        <div id="password-error" class="error"></div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="cpPassword">Confirm Password *</label>
+                                    <input id="cpPassword" type="password" name="cpPassword" data-error=".errorTxt4" aria-required="true" class="error" aria-describedby="cpPassword-error">
+                                    <div class="errorTxt4">
+                                        <div id="cpPassword-error" class="error"></div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s12">
+                                    <!-- old button -->
+                                    <!--
+                            <button class="btn waves-effect waves-light right submit" type="submit" name="action">Submit
+                                <i class="mdi-content-send right"></i>
+                            </button>
+                            -->
+                                    <button class="waves-effect waves-light btn green" type="submit" id="register" name="register" onclick="displayToast(); Submit()">Submit
+                                        <i class="material-icons left">send</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Old form without validation. saving just in case -->
+            <!--
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="battle-net-tag" type="text" class="validate" required>
+                    <label for="battle-net-tag">Battle.Net Tag</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="battle-net-tag" type="text" class="validate">
+                    <label for="battle-net-tag">Rank (if unranked put your character level)</label>
+                </div </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+--->
+
+            <!-- old button i was using -->
+            <!-- now testing actual button tag -->
+            <!--
+                <a class="waves-effect waves-light btn green" onclick="Submit()"><i class="material-icons left">done</i>Submit</a>
+                -->
+            <!--
+                <button class="waves-effect waves-light btn green" type="submit" name="action" onclick="Submit()">Submit
+                    <i class="material-icons left">send</i>
+                </button>
+                    
+                </form>
+             -->
+            <!-- end of old form -->
+
+
+            <div class="row">
+                <p class="light">Just give us some basic information - our trained team of experts will leverage sophistacted resources we have to investigate your abilities. We will make a decision and update it here. <br> <br> You can check the status of your application with your password and Battle.net tag.</p>
+                <button data-target="modal1" class="btn modal-trigger blue"><i class="material-icons left">search</i>Check Status</button>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Check your Status</h4>
+                        <p>If you already submitted your application - please check the status of it here.</p>
+                        <p>Enter your Battle.net tag (that you used to apply) and your password.</p>
+                        <form class="col s11">
+                            <div class="row">
+                                <div class="input-field col s11">
+                                    <input id="battle-net-tag-search" type="text" class="validate">
+                                    <label for="battle-net-tag-search">Battle.Net Tag</label>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s11">
+                                        <input id="password-search" type="password" class="validate">
+                                        <label for="password-search">Password</label>
+                                    </div>
+                                </div>
+                                <a class="waves-effect waves-light btn green" onclick="Lookup()"><i class="material-icons left">done</i>Lookup</a>
+                        </form>
+                        </div>
+                        <div class="modal-footer">  
+                            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Close Lookup </a>
+                            <a href="mailto:admin@higgaming.win" class="modal-action modal-close waves-effect waves-green btn-flat ">Need help?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <br>
         <br>
 
@@ -119,13 +231,17 @@
                 <div class="col l3 s12">
 
                     <ul>
-                        <li><a class="white-text" href="#!"></a>
+                        <li>
+                            <a class="white-text" href="#!"></a>
                         </li>
-                        <li><a class="white-text" href="#!"></a>
+                        <li>
+                            <a class="white-text" href="#!"></a>
                         </li>
-                        <li><a class="white-text" href="#!"></a>
+                        <li>
+                            <a class="white-text" href="#!"></a>
                         </li>
-                        <li><a class="white-text" href="#!"></a>
+                        <li>
+                            <a class="white-text" href="#!"></a>
                         </li>
                     </ul>
                 </div>
@@ -146,7 +262,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-               This was made using the <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize framework.</a> Bootstrap,is great, but it didn't have the feel and looks I was going for - so I found this.
+                This was made using the <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize framework.</a> Bootstrap,is great, but it didn't have the feel and looks I was going for - so I found this.
             </div>
         </div>
     </footer>
@@ -154,8 +270,13 @@
 
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/plugins/Validator/jquery.validate.js"></script>
+    <script src="js/plugins/Validator/additional-methods.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/extrafunctions.js"></script>
+    <script src="js/testvalidatejs.js"></script>
+
 
 </body>
 
