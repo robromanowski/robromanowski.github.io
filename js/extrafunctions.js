@@ -45,14 +45,49 @@ function Lookup() {
     }
 }
 
+function SuggestGame() {
+    // Using an alert to test button action - submit
+    // alert("Submitted :)");
+    
+    if(document.getElementById("name-of-game").value == '') {
+        
+    // test to alert if game was empty, if it was empty, should trigger here, if not move down to else statement
+    // alert('You did not input a game, silly!');
+        
+    // Display the toast for to show them it was succesful
+    Materialize.toast('Looks like you forget to suggest a game name!', 4000);
+        
+    } else {
 
+    // Set a variable for the name
+    var newGame = document.getElementById("name-of-game").value
+
+    //Get tag and store it
+    localStorage.setItem(document.getElementById("name-of-game").value, newGame);
+    
+    // Display the toast for to show them it was succesful
+    Materialize.toast('Thanks for your suggestion! :)', 4000);
+        
+    // test to alert back if it detected the right game you typed in
+    //alert('your game.value was = ' + newGame);
+        
+    // Close the modal automatically
+     $('#modal1').modal('close');
+    }
+}
+
+    
+
+/*
 // Disable button function
 // Disable all fields so you can hit submit until it detects all are filled out
 $(document).ready(function () {
     requiredTest();
     $('#firstName, #lastName, #battleNetTag, #rank, #password, #cpPassword').change(requiredTest);
 });
+*/
 
+/*
 function requiredTest() {
     if ($('#firstName').val().length > 4 &&
         $('#lastName').val().length > 4 &&
@@ -66,6 +101,7 @@ function requiredTest() {
         $("button[type=submit]").prop("disabled", true);
     }
 }
+*/
 
 /*
 $('#firstName, #lastName, #battleNetTag, #rank, #password, #cpPassword').bind('keyup', function() {
