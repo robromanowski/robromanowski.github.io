@@ -26,7 +26,7 @@
         <li><a href="tryout.html">Tryout</a>
         </li>
         <li class="divider"></li>
-        <li><a href="inventory.html">Game Inventory</a>
+        <li><a href="about.html">About</a>
         </li>
     </ul>
     <nav class="light-blue lighten-1" role="navigation">
@@ -35,14 +35,14 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button" href="about.html" data-activates="dropdown1">About Us<i class="material-icons right">arrow_drop_down</i></a>
+                <li><a class="dropdown-button" href="inventory.html" data-activates="dropdown1">Game Inventory<i class="material-icons right">arrow_drop_down</i></a>
                 </li>
             </ul>
 
             <!-- Mobile Nav -->
             <!-- uses this if it detects its a mobile device -->
             <ul id="nav-mobile" class="side-nav">
-                 <li><a href="index.html">Home</a>
+                <li><a href="index.html">Home</a>
                 </li>
                 <li class="divider"></li>
                 <li><a href="stats.html">Stats</a>
@@ -51,7 +51,7 @@
                 <li><a href="tryout.html">Tryout</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="stats.html">Game Inventory</a>
+                <li><a href="about.html">About</a>
                 </li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse">Menu<i class="material-icons"></i></a>
@@ -63,32 +63,85 @@
     <div class="section no-pad-bot" id="index-banner">
     <div class="container">
         
-            <h5>Who are we?</h5>
+            <h5>Master Game Inventory</h5>
         <div class="center">
-                <p class="light">We currently are a small little squad - but we have BIG talent (and dreams (dank memes cant melt our steel dreams)). We are a team based in the Greater Hartford area, and even though maybe have not heard of us yet - we are looking to become a respectable name.</p>
+                <p class="light">This will keep track of all the (board) games we have. Make sure any games you own are on this list. Add them yourself on contact a site admin (Rob SR.) to get them added. Also, a suggestion box might be incoming!</p>
             </div>
       <br><br>
       <div class="row center">
-        <h5 class="center">HIG Gaming</h5>
-          <p class="light">Robert "I dont play Support" Romanowski</p>
-          <p class="light">Robert "JR" Rotaru</p>
-          <p class="light">Kyle "Kenneth" "The Bus" "The Man" Bussmann</p>
-          <p class="light">Matt "Edemame" "Needs a better nickname" Verderame</p>
-          <p class="light">E(van)<sup>2</sup> Dam</p>
-          <p class="light">Zach "Controll(er) Freak" Sloneker</p>
-          <p class="light">Eddie "Eddies Plays Overwatch?" Broadhead</p>
-          <p class="light">Matt "20 minutes early" Musich</p>
+        <ul class="collection">
+            <li class="collection-item avatar">
+              <img src="img/game_camelup_square.jpg" alt="" class="circle">
+              <span class="title bold600Text">Camel Up</span>
+              <p><span class="bold500Text">Owner: </span>(2) Jimmy and Matt <br>
+                  <span class="bold500Text">Time: </span>20-30 minutes <span class="bold500Text">Players: </span>2-8
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">thumb_up</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/game_catan_square.jpg" alt="" class="circle">
+              <span class="title bold600Text">Game 2</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">thumb_down</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/game_tickettoride_square.jpg" alt="" class="circle">
+              <span class="title bold600Text">Game 3</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">thumb_up</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/game_mechsvsminions_square.jpg" alt="" class="circle">
+              <span class="title bold600Text">Game 4</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">thumb_down</i></a>
+            </li>
+        </ul>
         </div>
       <br><br>
-
     </div>
   </div>
+    <div class="container">
+    <div class="row">
+                <p class="light">Yes, we got alot of games, folks. We got the best games. Fantastic games. Nobody games better than we do. We just keep winning, folks. We're gonna get tired of winning. We're gonna build a new game and Mexico is gonna pay for it. Is there a game that you want that we don't have? Sad. However, we are fantastic folks and we will make gaming great again.<br> <br> Want to suggest a game to add to Higgaming.win's expansive repertoire? Click the button below and submit a quick suggestion!</p>
+                <button data-target="modal1" class="btn modal-trigger blue"><i class="material-icons left">chat_bubble_outline</i>Suggest Game</button>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Suggest a Game</h4>
+                        <p>Thanks for your efffort towards continuous improvement of the Higgaming.win gaming experience.</p>
+                        <p>Please enter your suggestion for a game below.</p>
+                        <form class="col s11">
+                            <div class="row">
+                                <div class="input-field col s11">
+                                    <input id="name-of-game" type="text" class="validate">
+                                    <label for="name-of-game">Name of Game</label>
+                                </div>
+                                <a class="waves-effect waves-light btn green" onclick="SuggestGame()"><i class="material-icons left">done</i>Submit</a>
+                        </form>
+                        </div>
+                        <div class="modal-footer">  
+                            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancel </a>
+                            <a href="mailto:admin@higgaming.win" class="modal-action modal-close waves-effect waves-green btn-flat ">Need help?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <br>
         <br>
 
         <div class="section">
 
         </div>
+    
     </div>
 
     <footer class="page-footer orange">
@@ -135,11 +188,14 @@
         </div>
     </footer>
 
-
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/plugins/Validator/jquery.validate.js"></script>
+    <script src="js/plugins/Validator/additional-methods.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/extrafunctions.js"></script>
+    <script src="js/testvalidatejs.js"></script>
 
 </body>
 
