@@ -26,3 +26,25 @@
     color: red;
 }
 
+.bold200Text{
+    font-weight: 200;
+}
+
+.bold300Text{
+    font-weight: 300;
+}
+
+.bold400Text{
+    font-weight: 400;
+}
+
+.bold500Text{
+    font-weight: 500;
+}
+
+.bold600Text{
+    font-weight: 600;
+}
+
+
+
