@@ -20,6 +20,8 @@
 .gameLogo{
     height: 40px;
     width: auto;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 .error{
