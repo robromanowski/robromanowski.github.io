@@ -2657,7 +2657,7 @@ ul.browser-default {
 }
 
 a {
-  color: #039be5;
+  color: black;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -3207,6 +3207,10 @@ td, th {
   color: #26a69a;
 }
 
+.secondary-content-hack {
+    float: right !important;
+  color: #26a69a !important;
+}
 .collapsible .collection {
   margin: 0;
   border: none;
