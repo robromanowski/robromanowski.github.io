@@ -81,6 +81,12 @@
     font-family: 'Runescape UF';
     color: green;
 }
+
+.rs-red
+{
+    font-family: 'Runescape UF';
+    color: red;
+}
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
