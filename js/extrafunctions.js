@@ -96,7 +96,12 @@ function myFunction() {
     }
 }
 
-
+function listAdd() {
+    var ul = document.getElementById("myUL");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode("Four"));
+    ul.appendChild(li);
+}
     
 
 /*
