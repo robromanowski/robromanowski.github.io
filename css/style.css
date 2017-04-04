@@ -59,3 +59,39 @@
     background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
 
+/* I used Transfonter (https://transfonter.org) to assist with web optimizationalizingmajig for this font */
+@font-face {
+	font-family: 'RuneScape UF';
+	src: url('.../fonts/rsfont/RuneScape-UF.eot');
+	src: url('.../fonts/rsfont/RuneScape-UF.eot?#iefix') format('embedded-opentype'),
+		url('.../fonts/rsfont/RuneScape-UF.woff') format('woff'),
+		url('.../fonts/rsfont/RuneScape-UF.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.rs-blue
+{
+    font-family: 'Runescape UF';
+    color: blue;
+}
+
+.rs-green
+{
+    font-family: 'Runescape UF';
+    color: green;
+}
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
