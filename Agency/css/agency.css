@@ -63,14 +63,23 @@ h6 {
   text-transform: uppercase;
   font-weight: 700;
 }
+.btn-black {
+  color: black;
+  background-color: white;
+  border-color: white;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-  color: white;
-  background-color: #fec503;
-  border-color: #f6bf01;
+  color: black;
+  background-color: white;
+  border-color: white;
 }
 .btn-primary:active,
 .btn-primary.active,
