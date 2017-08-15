@@ -1,0 +1,40 @@
+html,body,.container
+{
+    height:100%;
+}
+.container
+{
+    display:table;
+    width: 100%;
+    margin-top: -50px;
+    padding: 0 0 0 0; /*set left/right padding according to needs*/
+    box-sizing: border-box;
+}
+header
+{
+    background: #20222B;
+    height: 50px;
+}
+
+.row
+{
+    height: 100%;
+    display: table-row;
+}
+@media (min-width: 992px) {
+  .row .no-float {
+      display: table-cell;
+      float: none;
+  }
+}
+.greenbg {   
+    background: #84C318;
+}
+.blackbg {
+    background: #20222B;  	
+}
+
+.verticalcenter {
+    display: flex;
+    align-items: center;
+}
