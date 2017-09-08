@@ -753,3 +753,10 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+
+.blur{
+    font-family:sans-serif;
+    font-weight:bold;
+    -webkit-filter: blur(15px);
+    -webkit-transition: -webkit-filter .50s;
+}
