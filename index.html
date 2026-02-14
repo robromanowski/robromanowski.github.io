@@ -1,233 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>The definition of elite.</title>
-
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backpacking Trip Ideas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <!-- Navigation Bar Start -->
-    <!-- Dropdown Structure -->
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="about.html">About Us</a>
-        </li>
-        <li class="divider"></li>
-        <li><a href="stats.html">Stats</a>
-        </li>
-        <li class="divider"></li>
-        <li><a href="tryout.html">Tryout</a>
-        </li>
-        <li class="divider"></li>
-        <li><a href="inventory.html">Game Inventory</a>
-        </li>
-    </ul>
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="index.html" class="brand-logo"><img src="img/higgamingLogo50.png" class="logo">
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button" href="index.html" data-activates="dropdown1">Home<i class="material-icons right">arrow_drop_down</i></a>
-                </li>
-            </ul>
-
-            <!-- Mobile Nav -->
-            <!-- uses this if it detects its a mobile device -->
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="about.html">About Us</a>
-                </li>
-                <li class="divider"></li>
-                <li><a href="stats.html">Stats</a>
-                </li>
-                <li class="divider"></li>
-                <li><a href="tryout.html">Tryout</a>
-                </li>
-                <li class="divider"></li>
-                <li><a href="inventory.html">Game Inventory</a>
-                </li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse">Navigate<i class="material-icons"></i></a>
-        </div>
-    </nav>
-    <!-- End of Navigation -->
-
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-            <div class="center">
-                <p class="rs-green">
-                    <marquee><span class="blink">Be sure to check out the new nicknames on the About Us page!</span></marquee>
-                </p>
-            </div>
-            <h1 class="header center orange-text">HIG Gaming</h1>
-            <div class="center">
-                <img src="img/higgamingLogocleanedupTransp.png">
-            </div>
-            <div class="row center">
-                <h5 class="header col s12 light">Welcome to the HIG Gaming community!</h5>
-            </div>
-            <div class="row center">
-                <a href="about.html" id="download-button" class="btn-large waves-effect waves-light orange">Learn More</a>
-            </div>
-            <br>
-            <br>
-            <div class="center">
-                <p class="light">We are the HIGGAMING.WIN team. We are (not) actually a professional team. We just wanted a fancy website to be cool like them.</p>
-            </div>
-        </div>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">2026</p>
+      <h1>Backpacking Trip Ideas</h1>
+      <p class="subhead">Trip ideas at a glance so we can vote on them.</p>
     </div>
+  </header>
 
-    <div class="center container">
-        <p class="rs-blue">
-            <marquee><span class="blink">Bank sale! 150k! (Jimmy buys gold)</span></marquee>
-        </p>
-    </div>
+  <main class="layout">
+    <section class="view-controls" aria-label="Card layout">
+      <span class="view-label">View</span>
+      <button class="view-button" id="view-single" type="button" data-view="single" aria-pressed="true" title="One per row">▤</button>
+      <button class="view-button" id="view-double" type="button" data-view="double" aria-pressed="false" title="Two per row">▦</button>
+    </section>
 
-    <div class="center container">
-        <p class="rs-red">
-            <marquee><span class="blink">Buying rune scimmy 50k - Zezima</span></marquee>
-        </p>
-    </div>
-    
-    <div class="container">
-        <div class="section">
+    <section id="trip-grid" class="trip-grid" aria-live="polite"></section>
 
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">today</i></h2>
-                        <h5 class="center">Upcoming Events</h5>
+    <details class="data-tools">
+      <summary>Data Tools (Import / Export CSV)</summary>
+      <section class="import-panel" aria-label="Import trips">
+        <h2>Export to CSV (Download)</h2>
+        <p class="hint">Export your Excel sheet as CSV, then upload it here.</p>
 
-                        <p class="light">
-                            <strong>Game Night</strong>
-                            <br>Every Weds of each week (7pm EST)
-                        </p>
-
-                        <p class="light">
-                            <strong>Scheduled Overwatch Games</strong>
-                            <br>We need a team to challenge us!
-                        </p>
-
-                        <p class="light">
-                            <strong>Scheduled League of Legends Games</strong>
-                            <br>We need a 5th man first!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- only want to show 2 columns - might use a 3 column view later -->
-
-                <!--
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                        <h5 class="center">Stacked Team Members</h5>
-
-                        <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-                    </div>
-                </div>
-                -->
-
-                <div class="col s12 m6">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">play_circle_filled</i></h2>
-                        <h5 class="center">Games we play:</h5>
-
-                        <p class="light">
-                            <strong>We are currently playing</strong>
-                            <br>
-                            <br>
-                            <img src="img/overwatch.png" class="gameLogo" alt="Overwatch">
-                            <img src="img/leagueoflegendstiny.png" class="gameLogo" alt="League of Legends">
-                            <img src="img/dota2.png" class="gameLogo" alt="Dota 2">
-                        </p>
-
-                        <p class="light">
-                            <strong>HIG Gaming also occasionaly plays</strong>
-                            <br>
-                            <br>
-                            <img src="img/sfv.png" class="gameLogo" alt="Street Figher V">
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <br>
+        <button id="export-csv" class="export-button" type="button">Export Current Trips to CSV <i class="fa-solid fa-download" aria-hidden="true"></i></button>
         <br>
 
-        <div class="section">
+        <h2>Import your CSV</h2>
+        <p class="hint">Upload your CSV to load your trips in.</p>
+        <input id="csv-upload" type="file" accept=".csv,text/csv">
 
-        </div>
-    </div>
+        <p id="import-status" class="import-status" role="status" aria-live="polite"></p>
+        <h2><i class="fa-solid fa-code"></i></h2>
+        <p class="csv-format"><strong>Columns:</strong></p>
+        <p class="csv-format"><code>trailName,mileage,elevation,state,conditions,mapImage,trailPhotos,warnings,comments,permits,links</code></p>
+        <p class="csv-format"><strong>Syntax Note: </strong></p>
+        <p class="csv-format">Format for multiples: Use <code>|</code> to separate multiple <code>Photos</code> and <code>Links</code>.</p>
+        <p class="csv-format">Format for Links: Use <code>Label1::URL|Label2::URL</code> for URLs.</p>
+      </section>
+    </details>
+  </main>
 
-    <div class="row center">
-        <a href="tryout.html" id="joinButton" class="btn-large waves-effect waves-light green">Join Today<i class="material-icons left">group</i></a>
-    </div>
+  <template id="trip-card-template">
+    <article class="card">
+      <div class="card-content">
+        <h2 class="trail-name"></h2>
 
-    <footer class="page-footer orange">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Why does this even exist?</h5>
-                    <p class="grey-text text-lighten-4">This site exists out of a passion. A passion for playing games...that's what some sites for a real team would try to sell you on. The real answer is: why not? </p>
+        <dl class="stats">
+          <div><dt>Mileage</dt><dd class="mileage"></dd></div>
+          <div><dt>Elevation Gain</dt><dd class="elevation"></dd></div>
+          <div><dt>State</dt><dd class="state"></dd></div>
+        </dl>
 
+        <section class="block">
+          <h3>Photos</h3>
+          <div class="gallery"></div>
+        </section>
 
-                </div>
-                <!- Blank spacer -->
-                <div class="col l3 s12">
-                    <ul>
-                        <li>
-                            <a class="white-text" href="#!"></a>
-                        </li>
-                        <li>
-                            <a class="white-text" href="#!"></a>
-                        </li>
-                        <li>
-                            <a class="white-text" href="#!"></a>
-                        </li>
-                        <li>
-                            <a class="white-text" href="#!"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Twitter (Doesnt exist yet!)</a>
-                        </li>
-                        <li><a class="white-text" href="#!">Facebook (Doesnt exist yet!)</a>
-                        </li>
-                        <li><a class="white-text" href="#!">Instragram (Doesnt exist yet!)</a>
-                        </li>
-                        <li><a class="white-text" href="#!">Vine (Doesnt exist yet!)</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                This was made using the <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize framework.</a>
-            </div>
-        </div>
-    </footer>
+        <section class="block">
+          <h3>Trail Type (AKA SAND CHECK??)</h3>
+          <div class="conditions text-content"></div>
+        </section>
 
+        <section class="block">
+          <h3>Map Brief</h3>
+          <img class="map-image zoomable" alt="" loading="lazy">
+        </section>
 
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+        <section class="block">
+          <h3>Any Concerns</h3>
+          <div class="warnings text-content"></div>
+        </section>
 
+        <section class="block">
+          <h3>Miscellaneous</h3>
+          <div class="comments text-content"></div>
+        </section>
+
+        <section class="block">
+          <h3>Permits</h3>
+          <div class="permits text-content"></div>
+        </section>
+
+        <section class="block">
+          <h3>Links</h3>
+          <ul class="trip-links"></ul>
+        </section>
+      </div>
+    </article>
+  </template>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded image">
+    <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image">Close</button>
+    <img id="lightbox-image" class="lightbox-image" alt="">
+  </div>
+
+  <script src="app.js"></script>
 </body>
-
 </html>
