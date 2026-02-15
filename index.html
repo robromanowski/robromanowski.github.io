@@ -45,7 +45,7 @@
         <p id="import-status" class="import-status" role="status" aria-live="polite"></p>
         <h2><i class="fa-solid fa-code"></i></h2>
         <p class="csv-format"><strong>Columns:</strong></p>
-        <p class="csv-format"><code>trailName,mileage,elevation,state,conditions,mapImage,trailPhotos,warnings,comments,permits,links</code></p>
+        <p class="csv-format"><code>trailName,mileage,elevation,state,conditions,mapImage,trailPhotos,warnings,comments,commentsHighlights,permits,links</code></p>
         <p class="csv-format"><strong>Syntax Note: </strong></p>
         <p class="csv-format">Format for multiples: Use <code>|</code> to separate multiple <code>Photos</code> and <code>Links</code>.</p>
         <p class="csv-format">Format for Links: Use <code>Label1::URL|Label2::URL</code> for URLs.</p>
@@ -80,22 +80,31 @@
         </section>
 
         <section class="block">
-          <h3>Any Concerns</h3>
-          <div class="warnings text-content"></div>
-        </section>
-
-        <section class="block">
-          <h3>Miscellaneous</h3>
+          <h3>Overview</h3>
           <div class="comments text-content"></div>
+          <h4>Loop</h4>
+          <div class="loop-status text-content"></div>
+          <h4>Trail(s)</h4>
+          <div class="trail-list text-content"></div>
         </section>
 
         <section class="block">
-          <h3>Permits</h3>
+          <h3>Comments/Highlights</h3>
+          <div class="comments-highlights text-content"></div>
+        </section>
+
+        <section class="block">
+          <h3>Permits <i class="fa-regular fa-newspaper"></i></h3>
           <div class="permits text-content"></div>
         </section>
 
         <section class="block">
-          <h3>Links</h3>
+          <h3>Any Concerns <i class="fa-solid fa-triangle-exclamation"></i></h3>
+          <div class="warnings text-content"></div>
+        </section>
+
+        <section class="block">
+          <h3>Links <i class="fa-solid fa-link"></i></h3>
           <ul class="trip-links"></ul>
         </section>
       </div>
@@ -110,4 +119,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-

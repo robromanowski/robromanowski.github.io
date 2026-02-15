@@ -24,10 +24,15 @@ let trips = [
       "https://i.postimg.cc/TwDCbMRv/cirque1.jpg",
       "https://i.postimg.cc/MH05s7fz/cirque2.png",
       "https://i.postimg.cc/6qVcHr4X/cirque3.png",
-      "https://i.postimg.cc/wM52WXRz/cirque4.png"
+      "https://i.postimg.cc/wM52WXRz/cirque4.png",
+      "https://i.postimg.cc/9XnNSfqH/cirque5.jpg",
+      "https://i.postimg.cc/h453wG7F/cirque6.jpg",
+      "https://i.postimg.cc/02KHqq7W/cirque7.jpg",
+      "https://i.postimg.cc/Dy4YKK1C/cirque8.jpg"
     ],
     warnings: "Will update if I find anything I'm worried about (i.e. trail too sandy? not enough water sources? grizzly bears?",
     comments: "- Full loop \u2705\\n\\n Trail(s)\\n- Big Sandy Trail\\n- Shadow Lake Trail\\n- Hailey Pass Trail",
+    commentsHighlights: "- Seems to be one the top rated backpacking loops (as is Alice Toxaway) aka should be incredible\\n- Which also means could be crowded\\n- How crowded? Poop/TP?",
     permits: "No permits needed!"
   },
   {
@@ -55,10 +60,15 @@ let trips = [
       "https://i.postimg.cc/VsFXVLZx/alice1.png",
       "https://i.postimg.cc/SQGcvN13/alice2.jpg",
       "https://i.postimg.cc/tRzFMCvf/alice3.jpg",
-      "https://i.postimg.cc/J7Qj24Y9/alice4.jpg"
+      "https://i.postimg.cc/J7Qj24Y9/alice4.jpg",
+      "https://i.postimg.cc/WpBxz3ph/alice5.jpg",
+      "https://i.postimg.cc/qBPWqRBC/alice6.jpg",
+      "https://i.postimg.cc/BZrRb6ZL/alice7.jpg",
+      "https://i.postimg.cc/1RkbXtRV/alice8.jpg"
     ],
     warnings: "Will update if I find anything I'm worried about (i.e. trail too sandy? not enough water sources? grizzly bears?)",
     comments: "- Full loop \u2705\\n\\n Trail(s)\\n- Petit Creek Trail\\n- Yellowbelly Trail",
+    commentsHighlights: "- Seems to be one the top rated backpacking loops (as is Cirque de Towers) aka should be incredible\\n- Which also means could be crowded\\n- How crowded? Poop/TP?",
     permits: "Free, self-issued permit at trailhead (no need to reserve early). Basically no permit needed!"
   },
   {
@@ -82,14 +92,19 @@ let trips = [
       "https://i.postimg.cc/MGynfdhD/zirkel1.png",
       "https://i.postimg.cc/rp6dpvYZ/zirkel2.jpg",
       "https://i.postimg.cc/vmW4x3pr/zirkel3.jpg",
-      "https://i.postimg.cc/JhbsHP9K/zirkel4.png"
+      "https://i.postimg.cc/JhbsHP9K/zirkel4.png",
+      "https://i.postimg.cc/rwK4H8WQ/zirkel5.jpg",
+      "https://i.postimg.cc/HkVMNp5M/zirkel6.jpg",
+      "https://i.postimg.cc/rwK4H8Wr/zirkel7.jpg",
+      "https://i.postimg.cc/mgt9nbMF/zirkel8.jpg"
     ],
     warnings: "Will update if I find anything I'm worried about (i.e. trail too sandy? not enough water sources? grizzly bears?)",
     comments: "- Full loop \u2705\\n\\n Trail(s)\\n- Gilpin Trail\\n- Gold Creek Trail\\n- Three Island Lake Trail",
+    commentsHighlights: "- Should be less busy/more solitude\\n- Saw a comment from someone saying its top 3 spot in the world (and that it reminds him of Banff!)\\n- Seems to have logical spots to camp at alpine lakes",
     permits: "Free, self-issued permit at trailhead (no need to reserve early). Basically no permit needed!"
   },
   {
-    trailName: "Needle Creek/Vallecito Creek Loop (San Juans)",
+    trailName: "Needle Creek/Vallecito Loop (San Juans)",
     mileage: "23.7 mi",
     elevation: "4,778 ft gain",
     state: "Colorado",
@@ -113,10 +128,15 @@ let trips = [
       "https://i.postimg.cc/YCJhnJ6G/needle1.jpg",
       "https://i.postimg.cc/FH27W2y3/needle2.png",
       "https://i.postimg.cc/CxWzPWGj/needle3.png",
-      "https://i.postimg.cc/7Zpfsp3P/needle4.jpg"
+      "https://i.postimg.cc/7Zpfsp3P/needle4.jpg",
+      "https://i.postimg.cc/NFjFr4kb/needle5.jpg",
+      "https://i.postimg.cc/T131W9JC/needle6.jpg",
+      "https://i.postimg.cc/FzHzJZVP/needle7.jpg",
+      "https://i.postimg.cc/fyRy0KfC/needle8.jpg"
     ],
     warnings: "Will update if I find anything I'm worried about (i.e. trail too sandy? not enough water sources? grizzly bears?)",
     comments: "- We take a TRAIN into the wilderness to start!! \uD83D\uDE82\\n\\n- Not a full loop \u274C (shuttle seems easy back to train)\\n\\n Trail(s)\\n- Needle Creek Trail\\n- Johnson Creek Trail\\n- Vallecito Creek Trail",
+    commentsHighlights: "- Train seems so cool (but might be tricky logistics? also pricey? still worth?)\\n- Would have to work out shuttle back (cost as well?)\\n- Apparently San Juans are beautiful",
     permits: "No permits needed!"
   }
 ];
@@ -143,6 +163,7 @@ const CSV_HEADERS = [
   "trailPhotos",
   "warnings",
   "comments",
+  "commentsHighlights",
   "permits",
   "links"
 ];
@@ -259,6 +280,87 @@ function renderTextBlock(element, value) {
   });
 
   element.innerHTML = htmlBlocks.join("<br>");
+}
+
+function formatTrailNameWithIcon(trailName) {
+  const text = String(trailName || "").trim();
+  if (!text) {
+    return "";
+  }
+
+  const openParen = text.lastIndexOf("(");
+  const closeParen = text.lastIndexOf(")");
+  const hasSuffixParens = openParen !== -1 && closeParen > openParen;
+
+  if (!hasSuffixParens) {
+    return escapeHtml(text);
+  }
+
+  const prefix = text.slice(0, openParen + 1);
+  const inner = text.slice(openParen + 1, closeParen).trim();
+  const suffix = text.slice(closeParen);
+  return `${escapeHtml(prefix)}<i class="fa-solid fa-mountain" aria-hidden="true"></i> ${escapeHtml(inner)}${escapeHtml(suffix)}`;
+}
+
+function splitMiscCommentsAndTrails(value) {
+  const normalized = normalizeDisplayText(value);
+  if (!normalized) {
+    return { miscComments: "", trails: [], loopText: "" };
+  }
+
+  const lines = normalized.split("\n");
+  const headingIndex = lines.findIndex((line) => {
+    const trimmed = line.trim();
+    return /^trail\(s\)\s*:?\s*$/i.test(trimmed) || /^trails?\s*:?\s*$/i.test(trimmed);
+  });
+
+  const trails = [];
+  let remainingLines = [...lines];
+
+  if (headingIndex !== -1) {
+    let cursor = headingIndex + 1;
+
+    while (cursor < lines.length && !lines[cursor].trim()) {
+      cursor += 1;
+    }
+
+    while (cursor < lines.length) {
+      const trimmed = lines[cursor].trim();
+      if (!trimmed) {
+        cursor += 1;
+        continue;
+      }
+
+      if (/^[-*]\s+/.test(trimmed)) {
+        trails.push(trimmed.replace(/^[-*]\s+/, "").trim());
+        cursor += 1;
+        continue;
+      }
+
+      break;
+    }
+
+    remainingLines = [...lines.slice(0, headingIndex), ...lines.slice(cursor)];
+  }
+
+  const loopLines = [];
+  const miscLines = remainingLines.filter((line) => {
+    const trimmed = line.trim();
+    const noBullet = trimmed.replace(/^[-*]\s+/, "").trim();
+    const isLoop = /\b(?:not\s+a?\s*)?full\s*loop\b/i.test(noBullet);
+
+    if (isLoop) {
+      loopLines.push(noBullet);
+      return false;
+    }
+
+    return true;
+  });
+
+  const miscComments = miscLines.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  const loopText = loopLines.map((loopLine) => `- ${loopLine}`).join("\n");
+
+  return { miscComments, trails, loopText };
 }
 
 function openLightbox(src, alt) {
@@ -379,6 +481,7 @@ function parseCsv(text) {
       trailPhotos,
       warnings: rowData.warnings,
       comments: rowData.comments,
+      commentsHighlights: rowData.commentsHighlights || "",
       permits: rowData.permits || "",
       links: parseLinks(rowData.links)
     };
@@ -413,6 +516,7 @@ function tripsToCsvRows(tripsToExport) {
       trailPhotos: (trip.trailPhotos || []).join("|"),
       warnings: trip.warnings,
       comments: trip.comments,
+      commentsHighlights: trip.commentsHighlights || "",
       permits: trip.permits || "",
       links: (trip.links || []).map((link) => `${link.label}::${link.url}`).join("|")
     };
@@ -465,9 +569,10 @@ function getCardSections(card) {
     card.querySelector(".gallery")?.closest(".block"),
     card.querySelector(".conditions")?.closest(".block"),
     card.querySelector(".map-image")?.closest(".block"),
-    card.querySelector(".warnings")?.closest(".block"),
     card.querySelector(".comments")?.closest(".block"),
+    card.querySelector(".comments-highlights")?.closest(".block"),
     card.querySelector(".permits")?.closest(".block"),
+    card.querySelector(".warnings")?.closest(".block"),
     card.querySelector(".trip-links")?.closest(".block")
   ];
 }
@@ -506,7 +611,7 @@ function equalizeSectionsForTwoUp() {
       return;
     }
 
-    for (let sectionIndex = 0; sectionIndex < 8; sectionIndex += 1) {
+    for (let sectionIndex = 0; sectionIndex < 9; sectionIndex += 1) {
       const rowSections = rowCards
         .map((card) => getCardSections(card)[sectionIndex])
         .filter(Boolean);
@@ -541,13 +646,18 @@ function renderTrips() {
   trips.forEach((trip) => {
     const node = template.content.cloneNode(true);
 
-    node.querySelector(".trail-name").textContent = trip.trailName;
+    node.querySelector(".trail-name").innerHTML = formatTrailNameWithIcon(trip.trailName);
     node.querySelector(".mileage").textContent = trip.mileage;
     node.querySelector(".elevation").textContent = trip.elevation;
     node.querySelector(".state").textContent = trip.state || "-";
+    const { miscComments, trails, loopText } = splitMiscCommentsAndTrails(trip.comments || "");
+    const trailLines = trails.map((trail) => `- ${trail}`).join("\n");
     renderTextBlock(node.querySelector(".conditions"), trip.conditions);
     renderTextBlock(node.querySelector(".warnings"), trip.warnings);
-    renderTextBlock(node.querySelector(".comments"), trip.comments);
+    renderTextBlock(node.querySelector(".comments"), miscComments);
+    renderTextBlock(node.querySelector(".loop-status"), loopText);
+    renderTextBlock(node.querySelector(".trail-list"), trailLines);
+    renderTextBlock(node.querySelector(".comments-highlights"), trip.commentsHighlights || "");
     renderTextBlock(node.querySelector(".permits"), trip.permits);
 
     const linksList = node.querySelector(".trip-links");
@@ -572,7 +682,7 @@ function renderTrips() {
     applyImageWithFallback(mapImage, trip.mapImage, `${trip.trailName} loop map`);
 
     const gallery = node.querySelector(".gallery");
-    trip.trailPhotos.slice(0, 4).forEach((photoUrl, index) => {
+    trip.trailPhotos.slice(0, 8).forEach((photoUrl, index) => {
       const img = document.createElement("img");
       img.loading = "lazy";
       img.classList.add("zoomable");

@@ -249,6 +249,14 @@ dd {
   color: #1e3a31;
 }
 
+.block h4 {
+  margin: 0.75rem 0 0.4rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #2f4f43;
+}
+
 .block p {
   margin: 0;
   color: #263730;
