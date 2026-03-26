@@ -1,5 +1,6 @@
 let trips = [
   {
+    section: "Bigger Hikes",
     trailName: "Cirque of the Towers (Wind River Range)",
     mileage: "23.7 mi",
     elevation: "3,871 ft gain",
@@ -36,6 +37,7 @@ let trips = [
     permits: "No permits needed!"
   },
   {
+    section: "Easier Hikes",
     trailName: "Alice-Toxaway Loop (Sawtooths)",
     mileage: "18.9 mi",
     elevation: "3,139 ft gain",
@@ -72,6 +74,7 @@ let trips = [
     permits: "Free, self-issued permit at trailhead (no need to reserve early). Basically no permit needed!"
   },
   {
+    section: "Bigger Hikes",
     trailName: "Zirkel Circle Loop (Mt Zirkel Wilderness)",
     mileage: "18.5 mi",
     elevation: "4,000 ft gain",
@@ -104,6 +107,7 @@ let trips = [
     permits: "Free, self-issued permit at trailhead (no need to reserve early). Basically no permit needed!"
   },
   {
+    section: "Bigger Hikes",
     trailName: "Needle Creek/Vallecito Loop (San Juans)",
     mileage: "23.7 mi",
     elevation: "4,778 ft gain",
@@ -138,8 +142,108 @@ let trips = [
     comments: "- We take a TRAIN into the wilderness to start!! \uD83D\uDE82\\n\\n- Not a full loop \u274C (shuttle seems easy back to train)\\n\\n Trail(s)\\n- Needle Creek Trail\\n- Johnson Creek Trail\\n- Vallecito Creek Trail",
     commentsHighlights: "- Train seems so cool (but might be tricky logistics? also pricey? still worth?)\\n- Would have to work out shuttle back (cost as well?)\\n- Apparently San Juans are beautiful",
     permits: "No permits needed!"
+  },
+  {
+    section: "Easier Hikes",
+    trailName: "Lower Red Castle Lake (Uintas)",
+    mileage: "22.7",
+    elevation: "1970",
+    state: "Utah",
+    links: [
+      {
+        label: "AllTrails (Lower Red Castle Lake via East Fork Smiths Fork)",
+        url: "https://www.alltrails.com/trail/us/utah/lower-red-castle-lake-via-e-fork-smiths-fork"
+      },
+      {
+        label: "Blog1 (Lower Red Castle Lake)",
+        url: "https://www.cleverhiker.com/backpacking/red-castle-lakes-uintas-backpacking-guide/"
+      },
+      {
+        label: "Blog2 (Lower Red Castle Lake)",
+        url: "https://girlonahike.com/backpacking-to-red-castle-lakes-uintas.html"
+      }
+    ],
+    conditions: "Trail looks like very good dirt. Will check more photos or videos to confirm this.",
+    mapImage: "https://i.postimg.cc/155NhRLh/uintasmap.png",
+    trailPhotos: [
+      "https://i.postimg.cc/3JJD5rPd/uintas1.jpg",
+      "https://i.postimg.cc/bNN2cYKG/uintas2.jpg",
+      "https://i.postimg.cc/YqqmK2Jv/uintas3.png",
+      "https://i.postimg.cc/X77ySNTv/uintas4.png",
+      "https://i.postimg.cc/gkk6Fcfr/uintas5.png",
+      "https://i.postimg.cc/tCCVQRLC/uintas6.png",
+      "https://i.postimg.cc/jddJ0qGK/uintas7.png",
+      "https://i.postimg.cc/xTTbDjW1/uintas8.png"
+    ],
+    warnings: "Will update if I find anything I'm worried about (i.e. trail too sandy? not enough water sources? grizzly bears?)",
+    comments: "- Not a full loop ❌ (But an easy out and back)\n\nTrail(s)\n- East Fork Smiths Fork Trail\n- North Slope Highline A Trail\n- Lake Hessie Trail\n- East Fork Smiths Fork Trail",
+    commentsHighlights: "- Seems to be very mellow incline\n- Seems to have super cool peak by the lake\n- Heard it has good/logical camping spots",
+    permits: "No permits needed!"
+  },
+  {
+    section: "Easier Hikes",
+    trailName: "Hell Roaring and Imogene Lake (Sawtooths)",
+    mileage: "19.5",
+    elevation: "1900",
+    state: "Idaho",
+    links: [
+      {
+        label: "AllTrails (Hell Roaring Lake via Hell Roaring Creek Trail)",
+        url: "Hell Roaring Lake via Hell Roaring Creek Trail"
+      },
+      {
+        label: "Alltrails (Imogene Lake)",
+        url: "www.alltrails.com/trail/us/idaho/imogene-lake"
+      }
+    ],
+    conditions: "Trail looks like very good dirt. Will check more photos or videos to confirm this.",
+    mapImage: "https://i.postimg.cc/dQTTJS1Y/hellmap.png",
+    trailPhotos: [
+      "https://i.postimg.cc/BQ9PbcLG/hell1.webp",
+      "https://i.postimg.cc/65J4qL2K/hell2.webp",
+      "https://i.postimg.cc/sDdGx9Bk/hell3.webp",
+      "https://i.postimg.cc/GhwTtJ80/hell4.webp",
+      "https://i.postimg.cc/XNyynDJV/hell5.webp",
+      "https://i.postimg.cc/SQzzmtsk/hell6.webp",
+      "https://i.postimg.cc/sfZZ30X3/hell7.webp",
+      "https://i.postimg.cc/Dfbb7YZF/hell8.webp"
+    ],
+    warnings: "Will update if I find anything I'm worried about (i.e. trail too sandy? not enough water sources? grizzly bears?)",
+    comments: "- Not a full loop ❌ (But an easy out and back)\n\nTrail(s)\n- Hell Roaring Trail\n- Alice Lake Redfish Lake Trail\n- Imogene Trail\n- Hell Roaring Trail",
+    commentsHighlights: "- Another mellow incline\n- Heard its picturesque\n- Same region as famous Alice Toxaway loop (Sawtooths) but way less crowded",
+    permits: "Free, self-issued permit at trailhead (no need to reserve early). Basically no permit needed!"
+  },
+  {
+    section: "Easier Hikes",
+    trailName: "Lakes Basin via East Fork Lostine",
+    mileage: "19.5",
+    elevation: "2877",
+    state: "Oregon",
+    links: [
+      { label: "AllTrails (Lakes Basin via East Fork Lostine)", url: "https://www.alltrails.com/trail/us/oregon/lakes-basin-via-east-fork-lostine-trail" },
+      { label: "Reddit Discussion", url: "https://www.reddit.com/r/WildernessBackpacking/comments/1nspcmg/eagle_cap_wilderness_lakes_basin/" }
+    ],
+    conditions: "Trail looks like very good dirt. Will check more photos or videos to confirm this.",
+    mapImage: "https://i.postimg.cc/sXCWRVQ8/oregonmap.png",
+    trailPhotos: [
+      "https://i.postimg.cc/mZNYBFSY/oregon1.jpg",
+      "https://i.postimg.cc/y6XmsSTX/oregon2.jpg",
+      "https://i.postimg.cc/J7cNMBQb/oregon3.jpg",
+      "https://i.postimg.cc/59qBbFm8/oregon4.jpg",
+      "https://i.postimg.cc/rzs09s3p/oregon4.jpg",
+      "https://i.postimg.cc/kDG6yGzM/oregon5.jpg",
+      "https://i.postimg.cc/pyrhBr4L/oregon6.jpg",
+      "https://i.postimg.cc/3WN4ZNVJ/oregon7.jpg",
+      "https://i.postimg.cc/rzs09s3V/oregon8.jpg"
+    ],
+    warnings: "Will update if I find anything I'm worried about (i.e. trail too sandy? not enough water sources? grizzly bears?)",
+    comments: "- Full loop ✅ (Loop-ish)\n\nTrail(s)\n- East Fork Lostine Trail\n- Moccasin Trail\n- Lakes Basin Trail",
+    commentsHighlights: "- Pacific Northwest!\n- Reddit comments very highly praised it\n- Seems to be not busy",
+    permits: "Free, self-issued permit at trailhead (no need to reserve early). Basically no permit needed!"
   }
 ];
+
+const HIKE_SECTIONS = ["Easier Hikes", "Bigger Hikes"];
 
 const REQUIRED_HEADERS = [
   "trailName",
@@ -154,6 +258,7 @@ const REQUIRED_HEADERS = [
 ];
 
 const CSV_HEADERS = [
+  "section",
   "trailName",
   "mileage",
   "elevation",
@@ -176,6 +281,15 @@ const lightboxClose = document.getElementById("lightbox-close");
 const csvUpload = document.getElementById("csv-upload");
 const exportButton = document.getElementById("export-csv");
 const importStatus = document.getElementById("import-status");
+const openTripCodeModalButton = document.getElementById("open-trip-code-modal");
+const closeTripCodeModalButton = document.getElementById("close-trip-code-modal");
+const tripCodeModal = document.getElementById("trip-code-modal");
+const generateTripCodeButton = document.getElementById("generate-trip-code");
+const copyTripCodeButton = document.getElementById("copy-trip-code");
+const tripCodeOutput = document.getElementById("trip-code-output");
+const galleryUrlInput = document.getElementById("trip-form-galleryUrl");
+const fetchGalleryButton = document.getElementById("fetch-gallery-photos");
+const fetchGalleryStatus = document.getElementById("fetch-gallery-status");
 const viewButtons = Array.from(document.querySelectorAll(".view-button"));
 const VIEW_STORAGE_KEY = "trip-grid-view";
 
@@ -403,6 +517,148 @@ function parseLinks(value) {
   });
 }
 
+function splitMultiInput(value) {
+  return splitPipeValues(String(value || "").replace(/\r?\n/g, "|"));
+}
+
+function parseLinksFlexible(value) {
+  return parseLinks(splitMultiInput(value).join("|"));
+}
+
+function toBulletLines(value) {
+  const lines = String(value || "")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  return lines.map((line) => line.replace(/^[-*]\s*/, "").trim());
+}
+
+function buildOverviewComments(notesValue, loopStatusValue, loopNoteValue, trailsValue) {
+  const blocks = [];
+
+  const noteLines = toBulletLines(notesValue);
+  if (noteLines.length) {
+    blocks.push(noteLines.map((line) => `- ${line}`).join("\n"));
+  }
+
+  const loopStatus = String(loopStatusValue || "").trim();
+  if (loopStatus) {
+    const base = loopStatus === "not-full" ? "Not a full loop \u274C" : "Full loop \u2705";
+    const loopNote = String(loopNoteValue || "").trim();
+    const loopText = loopNote ? `${base} (${loopNote})` : base;
+    blocks.push(`- ${loopText}`);
+  }
+
+  const trailLines = toBulletLines(trailsValue);
+  if (trailLines.length) {
+    blocks.push(`Trail(s)\n${trailLines.map((line) => `- ${line}`).join("\n")}`);
+  }
+
+  return blocks.join("\n\n");
+}
+
+function readTripFormValue(fieldId) {
+  const input = document.getElementById(fieldId);
+  return input ? input.value.trim() : "";
+}
+
+function buildTripFromForm() {
+  const overviewComments = buildOverviewComments(
+    readTripFormValue("trip-form-comments"),
+    readTripFormValue("trip-form-loopStatus"),
+    readTripFormValue("trip-form-loopNote"),
+    readTripFormValue("trip-form-trails")
+  );
+
+  const highlights = toBulletLines(readTripFormValue("trip-form-commentsHighlights"))
+    .map((line) => `- ${line}`)
+    .join("\n");
+
+  return {
+    section: readTripFormValue("trip-form-section") || "Bigger Hikes",
+    trailName: readTripFormValue("trip-form-trailName"),
+    mileage: readTripFormValue("trip-form-mileage"),
+    elevation: readTripFormValue("trip-form-elevation"),
+    state: readTripFormValue("trip-form-state"),
+    conditions: readTripFormValue("trip-form-conditions"),
+    mapImage: readTripFormValue("trip-form-mapImage"),
+    trailPhotos: splitMultiInput(readTripFormValue("trip-form-trailPhotos")),
+    warnings: readTripFormValue("trip-form-warnings"),
+    comments: overviewComments,
+    commentsHighlights: highlights,
+    permits: readTripFormValue("trip-form-permits"),
+    links: parseLinksFlexible(readTripFormValue("trip-form-links"))
+  };
+}
+
+function formatTripAsJsObject(trip) {
+  const quote = (value) => JSON.stringify(value ?? "");
+  const formatStringArray = (items, indent) => {
+    if (!items.length) {
+      return "[]";
+    }
+
+    return "[\n" + items.map((item) => `${indent}${quote(item)}`).join(",\n") + "\n    ]";
+  };
+
+  const formatLinks = (links) => {
+    if (!links.length) {
+      return "[]";
+    }
+
+    const lines = ["["];
+    links.forEach((link, index) => {
+      lines.push("      {");
+      lines.push(`        label: ${quote(link.label)},`);
+      lines.push(`        url: ${quote(link.url)}`);
+      lines.push(index === links.length - 1 ? "      }" : "      },");
+    });
+    lines.push("    ]");
+    return lines.join("\n");
+  };
+
+  return [
+    "{",
+    `    section: ${quote(trip.section || "Bigger Hikes")},`,
+    `    trailName: ${quote(trip.trailName)},`,
+    `    mileage: ${quote(trip.mileage)},`,
+    `    elevation: ${quote(trip.elevation)},`,
+    `    state: ${quote(trip.state)},`,
+    `    links: ${formatLinks(trip.links || [])},`,
+    `    conditions: ${quote(trip.conditions)},`,
+    `    mapImage: ${quote(trip.mapImage)},`,
+    `    trailPhotos: ${formatStringArray(trip.trailPhotos || [], "      ")},`,
+    `    warnings: ${quote(trip.warnings)},`,
+    `    comments: ${quote(trip.comments)},`,
+    `    commentsHighlights: ${quote(trip.commentsHighlights)},`,
+    `    permits: ${quote(trip.permits)}`,
+    "  },"
+  ].join("\n");
+}
+
+function generateTripCodeSnippet() {
+  const trip = buildTripFromForm();
+  if (!trip.trailName) {
+    importStatus.textContent = "Trip helper: trail name is required.";
+    return;
+  }
+
+  tripCodeOutput.value = formatTripAsJsObject(trip);
+}
+
+function openTripCodeModal() {
+  tripCodeModal.classList.add("open");
+  tripCodeModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeTripCodeModal() {
+  tripCodeModal.classList.remove("open");
+  tripCodeModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
 function parseCsvLine(line) {
   const values = [];
   let current = "";
@@ -472,6 +728,7 @@ function parseCsv(text) {
     }
 
     return {
+      section: rowData.section || "Bigger Hikes",
       trailName: tripName,
       mileage: rowData.mileage,
       elevation: rowData.elevation,
@@ -507,6 +764,7 @@ function tripsToCsvRows(tripsToExport) {
   const headerRow = CSV_HEADERS.join(",");
   const dataRows = tripsToExport.map((trip) => {
     const rowData = {
+      section: trip.section || "Bigger Hikes",
       trailName: trip.trailName,
       mileage: trip.mileage,
       elevation: trip.elevation,
@@ -643,7 +901,7 @@ function scheduleEqualizeSections() {
 function renderTrips() {
   grid.innerHTML = "";
 
-  trips.forEach((trip) => {
+  const createTripCard = (trip) => {
     const node = template.content.cloneNode(true);
 
     node.querySelector(".trail-name").innerHTML = formatTrailNameWithIcon(trip.trailName);
@@ -692,6 +950,30 @@ function renderTrips() {
     });
 
     grid.appendChild(node);
+  };
+
+  HIKE_SECTIONS.forEach((sectionName) => {
+    const header = document.createElement("div");
+    const sectionClass = sectionName.toLowerCase().replace(/\s+/g, "-");
+    header.className = `section-divider section-${sectionClass}`;
+    header.innerHTML = `<h2 class="section-title">${escapeHtml(sectionName)}</h2>`;
+    grid.appendChild(header);
+
+    const sectionTrips = trips.filter(
+      (trip) => (trip.section || "Bigger Hikes") === sectionName
+    );
+
+    if (!sectionTrips.length) {
+      const empty = document.createElement("p");
+      empty.className = "section-empty";
+      empty.textContent = "Add trips to this section.";
+      grid.appendChild(empty);
+      return;
+    }
+
+    sectionTrips.forEach((trip) => {
+      createTripCard(trip);
+    });
   });
 
   scheduleEqualizeSections();
@@ -713,7 +995,66 @@ csvUpload.addEventListener("change", async (event) => {
   }
 });
 
+fetchGalleryButton.addEventListener("click", async () => {
+  const galleryUrl = galleryUrlInput.value.trim();
+  if (!galleryUrl) {
+    fetchGalleryStatus.textContent = "Paste a PostImg gallery URL first.";
+    return;
+  }
+
+  fetchGalleryStatus.textContent = "Fetching…";
+  fetchGalleryButton.disabled = true;
+
+  try {
+    const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(galleryUrl)}`;
+    const response = await fetch(proxyUrl);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const html = await response.text();
+
+    const urlPattern = /https:\/\/i\.postimg\.cc\/[^"'\s<>]+\.(?:jpe?g|png|gif|webp)/gi;
+    const allMatches = [...new Set(html.match(urlPattern) || [])];
+    // PostImg uses /t/ path prefix for thumbnails on gallery pages
+    const directUrls = allMatches.filter(u => !/\/t\//.test(u));
+
+    if (directUrls.length === 0) {
+      fetchGalleryStatus.textContent = "No direct image URLs found on that page — paste them manually below.";
+    } else {
+      document.getElementById("trip-form-trailPhotos").value = directUrls.join("\n");
+      fetchGalleryStatus.textContent = `Found ${directUrls.length} image${directUrls.length !== 1 ? "s" : ""} — review below.`;
+    }
+  } catch {
+    fetchGalleryStatus.textContent = "Fetch failed — paste image URLs manually below.";
+  } finally {
+    fetchGalleryButton.disabled = false;
+  }
+});
+
 exportButton.addEventListener("click", downloadCsv);
+openTripCodeModalButton.addEventListener("click", openTripCodeModal);
+closeTripCodeModalButton.addEventListener("click", closeTripCodeModal);
+generateTripCodeButton.addEventListener("click", generateTripCodeSnippet);
+copyTripCodeButton.addEventListener("click", async () => {
+  if (!tripCodeOutput.value.trim()) {
+    importStatus.textContent = "Trip helper: generate code first.";
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(tripCodeOutput.value);
+    importStatus.textContent = "Trip helper: code copied.";
+  } catch {
+    tripCodeOutput.select();
+    document.execCommand("copy");
+    importStatus.textContent = "Trip helper: code copied.";
+  }
+});
+
+tripCodeModal.addEventListener("click", (event) => {
+  if (event.target === tripCodeModal) {
+    closeTripCodeModal();
+  }
+});
+
 viewButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setGridView(button.dataset.view);
@@ -738,6 +1079,11 @@ lightbox.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && tripCodeModal.classList.contains("open")) {
+    closeTripCodeModal();
+    return;
+  }
+
   if (event.key === "Escape" && lightbox.classList.contains("open")) {
     closeLightbox();
   }

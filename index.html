@@ -35,20 +35,26 @@
         <h2>Export to CSV (Download)</h2>
         <p class="hint">Export your Excel sheet as CSV, then upload it here.</p>
 
-        <button id="export-csv" class="export-button" type="button">Export Current Trips to CSV <i class="fa-solid fa-download" aria-hidden="true"></i></button>
-        <br>
-
+        <button id="export-csv" class="export-button" type="button">Export to CSV <i class="fa-solid fa-download" aria-hidden="true"></i></button>
+        <hr class="tool-divider">
         <h2>Import your CSV</h2>
         <p class="hint">Upload your CSV to load your trips in.</p>
-        <input id="csv-upload" type="file" accept=".csv,text/csv">
+        <label for="csv-upload" class="export-button import-upload-button">Import Trips CSV <i class="fa-solid fa-upload" aria-hidden="true"></i></label>
+        <input id="csv-upload" class="visually-hidden-file" type="file" accept=".csv,text/csv">
 
         <p id="import-status" class="import-status" role="status" aria-live="polite"></p>
-        <h2><i class="fa-solid fa-code"></i></h2>
-        <p class="csv-format"><strong>Columns:</strong></p>
-        <p class="csv-format"><code>trailName,mileage,elevation,state,conditions,mapImage,trailPhotos,warnings,comments,commentsHighlights,permits,links</code></p>
-        <p class="csv-format"><strong>Syntax Note: </strong></p>
-        <p class="csv-format">Format for multiples: Use <code>|</code> to separate multiple <code>Photos</code> and <code>Links</code>.</p>
-        <p class="csv-format">Format for Links: Use <code>Label1::URL|Label2::URL</code> for URLs.</p>
+        <div class="csv-note-block">
+          <p class="csv-format"><strong>Columns:</strong></p>
+          <p class="csv-format"><code>section,trailName,mileage,elevation,state,conditions,mapImage,trailPhotos,warnings,comments,commentsHighlights,permits,links</code></p>
+          <p class="csv-format"><strong>Syntax Note: </strong></p>
+          <p class="csv-format">Use <code>|</code> to separate multiple <code>Photos</code> and <code>Links</code>.</p>
+          <p class="csv-format">Use <code>Label1::URL|Label2::URL</code> for URLs.</p>
+        </div>
+        <hr class="tool-divider">
+        <h2>Code Generator</h2>
+        <p class="hint">Fillable form to quickly add a new trip and generate the JS code to add it into the array easily.</p>
+        <br>
+        <button id="open-trip-code-modal" class="subtle-tool-button" type="button">Add Trip Helper <i class="fa-regular fa-file-code"></i></button>
       </section>
     </details>
   </main>
@@ -114,6 +120,94 @@
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded image">
     <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image">Close</button>
     <img id="lightbox-image" class="lightbox-image" alt="">
+  </div>
+
+  <div id="trip-code-modal" class="trip-code-modal" aria-hidden="true" role="dialog" aria-label="Generate trip code">
+    <div class="trip-code-panel">
+      <div class="trip-code-head">
+        <h2>Generate Trip Code</h2>
+        <button id="close-trip-code-modal" type="button" class="trip-code-close" aria-label="Close">Close</button>
+      </div>
+
+      <p class="hint">Fill what you have, then copy and paste into the <code>trips</code> array in <code>app.js</code>.</p>
+
+      <div class="trip-code-grid">
+        <label>Section
+          <select id="trip-form-section">
+            <option value="Bigger Hikes">Bigger Hikes</option>
+            <option value="Easier Hikes">Easier Hikes</option>
+          </select>
+        </label>
+        <label>Trail Name
+          <input id="trip-form-trailName" type="text">
+        </label>
+        <label>Mileage
+          <input id="trip-form-mileage" type="text">
+        </label>
+        <label>Elevation
+          <input id="trip-form-elevation" type="text">
+        </label>
+        <label>State
+          <input id="trip-form-state" type="text">
+        </label>
+        <label>Map Image URL
+          <input id="trip-form-mapImage" type="text">
+        </label>
+      </div>
+
+      <label>PostImg Gallery URL <span class="hint-inline">— paste to auto-fill photos below</span>
+        <div class="postimg-fetch-row">
+          <input id="trip-form-galleryUrl" type="text" placeholder="https://postimg.cc/gallery/…">
+          <button id="fetch-gallery-photos" type="button" class="subtle-tool-button">Fetch Photos <i class="fa-solid fa-images" aria-hidden="true"></i></button>
+        </div>
+      </label>
+      <p id="fetch-gallery-status" class="hint fetch-status" role="status" aria-live="polite"></p>
+
+      <label>Trail Photos (one per line or <code>|</code> separated)</label>
+      <textarea id="trip-form-trailPhotos" rows="5" placeholder="https://i.postimg.cc/…&#10;https://i.postimg.cc/…"></textarea>
+
+      <label>Links (<code>Label::URL</code> one per line or <code>|</code> separated)</label>
+      <textarea id="trip-form-links" rows="3"></textarea>
+
+      <label>Trail Conditions</label>
+      <textarea id="trip-form-conditions" rows="3"></textarea>
+
+      <label>Warnings</label>
+      <textarea id="trip-form-warnings" rows="3"></textarea>
+
+      <label>Overview Notes (optional, one per line)</label>
+      <textarea id="trip-form-comments" rows="3"></textarea>
+
+      <div class="trip-code-inline">
+        <label>Loop Status
+          <select id="trip-form-loopStatus">
+            <option value="full">Full loop ✅</option>
+            <option value="not-full">Not a full loop ❌</option>
+            <option value="">Skip</option>
+          </select>
+        </label>
+        <label>Loop Note (optional)
+          <input id="trip-form-loopNote" type="text" placeholder="e.g. shuttle seems easy back">
+        </label>
+      </div>
+
+      <label>Trails (one per line, bullets auto-added)</label>
+      <textarea id="trip-form-trails" rows="3"></textarea>
+
+      <label>Comments/Highlights (one per line, bullets auto-added)</label>
+      <textarea id="trip-form-commentsHighlights" rows="3"></textarea>
+
+      <label>Permits</label>
+      <textarea id="trip-form-permits" rows="2"></textarea>
+
+      <div class="trip-code-actions">
+        <button id="generate-trip-code" type="button" class="export-button">Generate Code</button>
+        <button id="copy-trip-code" type="button" class="subtle-tool-button">Copy Code</button>
+      </div>
+
+      <label>Paste this into <code>trips</code> array:</label>
+      <textarea id="trip-code-output" rows="10" readonly></textarea>
+    </div>
   </div>
 
   <script src="app.js"></script>
