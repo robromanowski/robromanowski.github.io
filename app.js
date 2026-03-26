@@ -215,7 +215,7 @@ let trips = [
   },
   {
     section: "Easier Hikes",
-    trailName: "Lakes Basin via East Fork Lostine",
+    trailName: "Lakes Basin via East Fork Lostine (Sawtooths)",
     mileage: "19.5",
     elevation: "2877",
     state: "Oregon",
